@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Rompe.gd" type="Script" id=1]
+
+[node name="Game" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 10
+custom_constants/margin_top = 10
+custom_constants/margin_left = 10
+custom_constants/margin_bottom = 10
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 10.0
+margin_top = 10.0
+margin_right = 730.0
+margin_bottom = 350.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 636.0
+margin_bottom = 340.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer"]
+margin_right = 636.0
+margin_bottom = 340.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="Sprite" parent="HBoxContainer/VBoxContainer/CenterContainer"]
+
+[node name="Imagen" type="Node2D" parent="HBoxContainer/VBoxContainer/CenterContainer"]
+
+[node name="Piezas1" type="Node2D" parent="HBoxContainer/VBoxContainer/CenterContainer"]
+position = Vector2( 0, 290 )
+
+[node name="Scroll" type="ScrollContainer" parent="HBoxContainer"]
+margin_left = 640.0
+margin_right = 720.0
+margin_bottom = 340.0
+rect_min_size = Vector2( 80, 0 )
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Piezas" type="VBoxContainer" parent="HBoxContainer/Scroll"]
