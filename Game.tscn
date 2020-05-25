@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Rompe.gd" type="Script" id=1]
+[ext_resource path="res://Game.gd" type="Script" id=1]
 
 [node name="Game" type="MarginContainer"]
 anchor_right = 1.0
@@ -28,18 +28,21 @@ margin_bottom = 340.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/VBoxContainer"]
+[node name="HUD" type="CenterContainer" parent="HBoxContainer/VBoxContainer"]
+margin_right = 636.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 0, 75 )
+
+[node name="Canvas" type="CenterContainer" parent="HBoxContainer/VBoxContainer"]
+margin_top = 79.0
 margin_right = 636.0
 margin_bottom = 340.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Background" type="Sprite" parent="HBoxContainer/VBoxContainer/CenterContainer"]
+[node name="Background" type="Sprite" parent="HBoxContainer/VBoxContainer/Canvas"]
 
-[node name="Imagen" type="Node2D" parent="HBoxContainer/VBoxContainer/CenterContainer"]
-
-[node name="Piezas1" type="Node2D" parent="HBoxContainer/VBoxContainer/CenterContainer"]
-position = Vector2( 0, 290 )
+[node name="Imagen" type="Node2D" parent="HBoxContainer/VBoxContainer/Canvas"]
 
 [node name="Scroll" type="ScrollContainer" parent="HBoxContainer"]
 margin_left = 640.0

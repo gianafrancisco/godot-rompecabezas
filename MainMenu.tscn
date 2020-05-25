@@ -64,7 +64,7 @@ margin_bottom = 98.0
 size_flags_vertical = 3
 
 [node name="NewGame" parent="Menu/VBoxContainer/HBoxContainer/VBoxContainer" instance=ExtResource( 6 )]
-scene_to_load = "res://Rompe.tscn"
+scene_to_load = "res://Game.tscn"
 
 [node name="CenterContainer" type="CenterContainer" parent="Menu/VBoxContainer/HBoxContainer"]
 margin_left = 275.0
